@@ -1,31 +1,29 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-exports.run = (client, message) => {
-  if (message.channel.type !== 'dm') {
-    const ozelmesajkontrol = new Discord.RichEmbed()
-    .setColor(0x00AE86)
-    .setTimestamp()
-    .setAuthor(message.author.username, message.author.avatarURL)
-    .setDescription('Özel mesajlarını kontrol et. :postbox:');
-    message.channel.sendEmbed(ozelmesajkontrol) }
-	const pingozel = new Discord.RichEmbed()
-    .setColor(0x00AE86)
-    .setTimestamp()
-    .setAuthor(message.author.username, message.author.avatarURL)
-    .setDescription('İşte Davet Linkim: https://bit.ly/KraliyetBOT');
-    return message.author.sendEmbed(pingozel)
-};
+module.exports = class TavsiyeCommand extends Command {
+    constructor(client) {
+        super(client, {
+            name: 'davet-oluştur',
+            group: 'sunucu',
+            memberName: 'davet-oluştur',
+            description: 'Bulunduğunuz sunucunun davet linkini verir.',
+        });
+    }
 
-exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: ['botu ekle', 'botu davet et', 'botuekle', 'invite'],
-  permLevel: 0
-};
+async run(msg) {
+    
+    let davet;
+    if (msg.channel.permissionsFor(this.client.user).has("CREATE_INSTANT_INVITE")) {
+        await msg.channel.createInvite({temporary: false, maxAge: 0, maxUses: 0, unique: false}).then(i => { davet = i.url });
+    } else davet = 'Davet linkini almak için yeterli yetkim yok.';
 
-exports.help = {
-  name: 'davet',
-  description: 'Botun davet linkini gönderir.',
-  usage: 'davet'
-};
+    const embed = new RichEmbed()
+    .setColor("RANDOM")
+    .setAuthor(msg.guild.name, msg.guild.iconURL)
+    .addField(`${msg.guild.name} Sunucusunun Davet Linki`, davet)
+    .setThumbnail(msg.guild.iconURL)
+    .setTimestamp()
+    return msg.channel.send({embed})
+    }
+}
