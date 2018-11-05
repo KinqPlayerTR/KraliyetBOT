@@ -4,9 +4,9 @@ const client = new Discord.Client();
 module.exports = class TavsiyeCommand extends Command {
     constructor(client) {
         super(client, {
-            name: 'davet-oluştur',
+            name: 'davet',
             group: 'sunucu',
-            memberName: 'davet-oluştur',
+            memberName: 'davet',
             description: 'Bulunduğunuz sunucunun davet linkini verir.',
         });
     }
