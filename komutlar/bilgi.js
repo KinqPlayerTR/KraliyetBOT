@@ -8,12 +8,12 @@ exports.run = (client, message) => {
     .setColor(0x00AE86)
     .setTimestamp()
     .setAuthor(message.author.username, message.author.avatarURL)
-    .setDescription('KraliyetBOT Bot sürümü: **v0.0.1** Beta \n İşte Davet Linkim: https://bit.ly/KraliyetBOT \n KraliyetBOT Destek Discord Sunucusu  \nhttps://discord.gg/T3mjQqy');
+    .setDescription('KraliyetBOT Bot sürümü: **v0.0.1** Beta \n İşte Davet Linkim: https://discord.gg/KraliyetBot \n KraliyetBOT Destek Discord Sunucusu  \nhttps://discord.gg/T3mjQqy');
     message.channel.sendEmbed(ozelmesajkontrol) }
 	const pingozel = new Discord.RichEmbed()
     .setColor(0x00AE86)
     .setAuthor(message.author.username, message.author.avatarURL)
-    .setDescription('Bot sürümü: **v0.0.1**');
+    .setDescription('Bot sürümü:https://discord.gg/KraliyetBot');
     return message.author.sendEmbed(pingozel)
 };
 
