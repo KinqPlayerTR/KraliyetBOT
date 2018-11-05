@@ -8,7 +8,7 @@ exports.run = (client, message) => {
     .setColor(0x00AE86)
     .setTimestamp()
     .setAuthor(message.author.username, message.author.avatarURL)
-    .setDescription('Özel Mesajlarına Bilgi Mesajımı Attım! :postbox: ');
+    .setDescription('KraliyetBOT Bot sürümü: **v0.0.1** Beta \n İşte Davet Linkim: https://bit.ly/KraliyetBOT \n KraliyetBOT Destek Discord Sunucusu  \nhttps://discord.gg/T3mjQqy');
     message.channel.sendEmbed(ozelmesajkontrol) }
 	const pingozel = new Discord.RichEmbed()
     .setColor(0x00AE86)
