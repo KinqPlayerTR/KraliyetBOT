@@ -7,14 +7,8 @@ exports.run = (client, message) => {
     .setColor(0x00AE86)
     .setTimestamp()
     .setAuthor(message.author.username, message.author.avatarURL)
-    .setDescription('Özel mesajlarını kontrol et. :postbox:');
+    .setDescription('İşte Davet Linkim: https://is.gd/KraliyetBOT');
     message.channel.sendEmbed(ozelmesajkontrol) }
-	const pingozel = new Discord.RichEmbed()
-    .setColor(0x00AE86)
-    .setTimestamp()
-    .setAuthor(message.author.username, message.author.avatarURL)
-    .setDescription('İşte Davet Linkim: https://is.gd/VS13af');
-    return message.author.sendEmbed(pingozel)
 };
 
 exports.conf = {
