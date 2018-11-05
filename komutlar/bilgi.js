@@ -13,7 +13,7 @@ exports.run = (client, message) => {
 	const pingozel = new Discord.RichEmbed()
     .setColor(0x00AE86)
     .setAuthor(message.author.username, message.author.avatarURL)
-    .setDescription('Davet Linki:https://bit.ly/KraliyetBot');
+    .setDescription('Davet Linki: https://bit.ly/KraliyetBot');
     return message.author.sendEmbed(pingozel)
 };
 
