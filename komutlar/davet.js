@@ -7,7 +7,7 @@ exports.run = (client, message) => {
     .setColor(0x00AE86)
     .setTimestamp()
     .setAuthor(message.author.username, message.author.avatarURL)
-    .setDescription('İşte Davet Linkim: https://bit.ly/KraliyetBOT');
+    .setDescription('İşte Davet Linkim: https://bit.ly/Kraliyetbot');
     message.channel.sendEmbed(ozelmesajkontrol) }
 };
 
