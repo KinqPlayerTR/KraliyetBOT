@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const ayarlar = require('../ayarlar.json');
 const { stripIndents } = require('common-tags');
 const moment = require('moment')
 const filterLevels = ['Yok.', 'Rolü olmayanlar için.', 'Herkes için.'];
