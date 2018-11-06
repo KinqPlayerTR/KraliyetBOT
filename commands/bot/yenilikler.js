@@ -20,7 +20,7 @@ module.exports = class NewsCommand extends Command {
 	async run(message) {
 		if (message.guild) {
 			var embed = new RichEmbed()
-			.setAuthor('Better Bot | Yenilikler', this.client.user.avatarURL)
+			.setAuthor('KraliyetBot | Yenilikler', this.client.user.avatarURL)
 			.setDescription(`Tüm komutları görmek için \`${this.client.commandPrefix}yardım\` yazabilirsiniz.`, this.client.user.avatarURL)
 			.addField(`Yenilikler | v1.0.5`, stripIndents`
 			+ Resimli giriş çıkış mesajı eklendi.
@@ -34,13 +34,13 @@ module.exports = class NewsCommand extends Command {
 			+ Bazı hatalar giderildi.
 			`)
 			.addField(`Bağlantılar/Linkler`, stripIndents`
-			• **Better Bot'u** sunucularınıza eklemek isterseniz [bana](https://discordapp.com/oauth2/authorize?client_id=457547769159352341&permissions=8&scope=bot) tıklayarak ekleyebilirsiniz.
-			• Bir sorun var ise [bana](https://discord.gg/rc5kfTU) tıklayarak **Destek Sunucum'a** gelip yardım alabilirsiniz.
-			• **Better Bot'a** oy vermek için [bana](https://discordbots.org/bot/457547769159352341) tıkla! Better Bota oy vermeyi unutmayın !
-			• **Better Bot'un** sitesine [bana](http://better-bot.rf.gd/) tıklayarak bakabilirsiniz.
+			• **KraliyetBot'u** sunucularınıza eklemek isterseniz [bana](https://bit.ly/KraliyetBot) tıklayarak ekleyebilirsiniz.
+			• Bir sorun var ise [bana](https://discord.gg/T3mjQqy tıklayarak **Destek Sunucum'a** gelip yardım alabilirsiniz.
+			• **KraliyetBot'a** oy vermek için [bana](Yakında) tıkla! KraliyetBota oy vermeyi unutmayın !
+			• **KraliyetBot'un** sitesine [bana](Yakında) tıklayarak bakabilirsiniz.
 			`)
 			.setColor("RANDOM")
-			.setFooter('©' + (new Date()).getFullYear() + ' Better Bot', this.client.user.avatarURL)
+			.setFooter('©' + (new Date()).getFullYear() + ' KraliyetBot', this.client.user.avatarURL)
 			.setTimestamp()
 			message.channel.send({embed});
 		}
